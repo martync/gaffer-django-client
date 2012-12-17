@@ -12,6 +12,6 @@ Features
  * Manage your process (add, restart, stop, start)
  * View running pids
 
-![Alt text](screenshots/process_list.png)
+![Alt text](https://raw.github.com/martync/gaffer-django-client/master/screenshots/process_detail.png)
 
-![Alt text](screenshots/process_detail.png)
+![Alt text](https://raw.github.com/martync/gaffer-django-client/master/screenshots/process_detail.png)
