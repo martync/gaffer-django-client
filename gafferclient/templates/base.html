@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>Gaffer client</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/custom.css" />
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% block extrahead %}{% endblock extrahead %}
+
+</head>
+<body>
+
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="/">Gaffer client</a>
+            <ul class=" nav pull-right">
+              <li><a href="{{ gaffer_server }}" target="_blank">{{ gaffer_server }}</a></li>
+            </ul>
+            <ul class="nav">
+              <li><a href="{% url process_list %}">Process list</a></li>
+              <li><a href="{% url pid_list %}">Running Pids</a></li>
+            </ul>
+            <!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div>
+
+
+
+    <div class="wrapper">
+
+        <div id="main" class='container'>
+            {% block content %}
+                
+            {% endblock content %}
+        </div>    
+    </div>
+</body>
+</html>

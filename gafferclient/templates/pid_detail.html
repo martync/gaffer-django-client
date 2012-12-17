@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1><a href="{% url process_detail pid.process.name %}">{{ pid.process.name|title }}</a> > pid #{{ pid.pid }}</h1>
+
+<div class="well">
+    <ul>
+        <li>Active : {{ pid.active }}</li>
+    </ul>
+</div>
+
+<hr>
+
+<h4>Pid actions</h4>
+<div class="btn-toolbar">
+  <div class="btn-group">
+    <a href="{% url pid_stop pid.process.name pid.pid %}" class="btn btn-small">Stop</a>
+  </div>
+</div>
+
+{% endblock content %}
